@@ -1,3 +1,6 @@
+  
+var pBFF = require("../data/friends");
+
 app.get("/api/:friends", function(req, res) {
     var fD= req.params.friendData;
     console.log(fD;
