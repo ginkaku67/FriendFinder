@@ -5,7 +5,7 @@ app.get("/api/:friends", function(req, res) {
     var fD= req.params.friendData;
     console.log(fD;
     for (var i = 0; i < friendData.length; i++) {
-      if (fD=== friendData[i].customerID) {
+      if (fD=== friendData[i].customerID) {//FIX????
         return res.json(friendData[i]);
       }
     }
