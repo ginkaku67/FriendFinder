@@ -5,127 +5,151 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Find a Deeper Connection</title>
+    <link rel="stylesheet" href="survey.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!--Bootstrap-->
-
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="survey.js"></script>
+    <style>#topBit {
+            background-color: cornflowerblue;
+            width: 100%;
+            text-align: center;
+            };
+            
+            #questionBit {
+            font-size: x-large;
+            };
+            </style>
 </head>
 <body>
-    <div class="container">
-    <h1>"Friend" Finder survey</h1>
-    <h2>Fill this out, marking everything from most (5) to least (1) applicable.</h2>
-  
-    </div>
-    <div class="container">
-        <p>Q1 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
+        <div class="container" id="topBit">
+                <h1>"Friend" Finder survey</h1>
+                <h2>Fill this out, marking everything from most (五) to least (一) applicable.</h2>
+            </div>
+
+        <form id="survey"> 
+                <div class="form-group">
+                    <label for="name">Name (Required)</label>
+                    <input type="text" class="form-control" id="name" placeholder="Fill me in, Justin" required>
+                </div>
+                <div class="form-group">
+                    <label for="photo">Link to Your Photo (Required to catalog your face for our Chinese parent company)</label>
+                    <input type="url" class="form-control" id="photo" placeholder="Enter a URL (Make it a pretty one)" required>
+                </div>
+                <hr class="my-4">
+                <div id="questions">
+                </div>
     
-        <p>Q2 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-    
-        <p>Q3 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-    
-        <p>Q4 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-    
-        <p>Q5 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
+                <button type="submit" class="btn btn-primary" id="submit">Submit</button>
+            </form>
+            <footer>
+                    <hr class="my-4">
+                    <a href="../data/potentialBestFriendsForever.js">Click me to see how the attractive people answered</a> | 
+                    <a href="https://github.com/ginkaku67">Click this for a disappointing time</a>
+                </footer>
 
-        <p>Q6 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-
-        <p>Q7 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-
-        <p>Q8 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-
-        <p>Q9 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-
-        <p>Q10 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-
-        <p>Q11 </p>
-        <select class="browser-default custom-select custom-select-lg mb-3">
-                    <option selected>Choices matter</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
-                    <option value="5">Five</option>
-        </select>
-
-    </div>
+                <div class="modal fade" id="friendshipPopUP" tabindex="-1" role="dialog">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title">You have superficial potential with...</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h3 id="maybeMatchName">Name</h3>
+                                    <img id="maybeFriendPhoto">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="modal fade" id="warning-modal" tabindex="-1" role="dialog">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                    <h5 class="modal-title">Hold on!</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Please complete all fields before submitting.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+</div>
 </body>
+<script>
+    $("#submit").click(function(){
+    event.preventDefault();
+    var answers = [];
+    var numAnswers = 0;
+    for (var i = 1; i <= 11; i++) {
+        answers.push(parseInt($(`input[name=question${i}]:checked`).val()));
+        if ($(`input[name=question${i}]:checked`).val()) numAnswers++;
+    }
+    
+    var user = {
+        name: $("#name").val().trim(),
+        photo: $("#photo").val().trim(),
+        scores: answers
+    };
+    
+    $.post("/api/potentialBestFriendsForever", user, function(response){
+        $("#maybeMatchName").text(response.name);
+        $("#maybeFriendPhoto").attr("src", response.photo);
+        $("#survey")[0].reset();
+        $('friendshipPopUp').modal('show');
+    });
+})
+var questions = [
+    "You like anime",
+    "You play video games",
+    "You are going to buy Pokemon Sword to trade exclusives with friends",
+    "You often burst into air guitar solos",
+    "You see no problem with men owning body pillows",
+    "You see no problem with those body pillows having art on them",
+    "Your favorite type of art is of anime girls",
+    "Your parents aren't proud of your last 3 answers",
+    "You like to make plans with friends that you will definitely cancel",
+    "You want to give Nick an A based on his questions alone",
+    "Nick will die sad and alone for making this survey and should probably give up on trying to make friends"
+];
+
+addQuestions();
+function addQuestions() {
+    for (var i=0; i<questions.length; i++) {
+        var newQuestion = $("<div>")
+            .addClass("question")
+            .html(`<h4>Question ${i+1}</h4><p>${questions[i]}</p>`);
+        for (var j=0; j<5; j++) {
+            newQuestion.append(`<div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="question${i+1}" id="q${i+1}-opt${j+1}" value="${j+1} required">
+                <label class="form-check-label" for="q${i+1}-opt${j+1}">${j+1}</label>
+                </div>`);
+        }
+        $("#questions").append(newQuestion);
+    }
+};
+lastQuestion();
+function lastQuestion() {
+var lastQuestion = $("<div>")
+    .addClass("question")
+    .html(`<h4>Question 12</h4><p>Nick should take a nap soon (look into his eyes while answering this question)</p>`);
+    for (var j=0; j<5; j++) {
+        lastQuestion.append(`<div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="question12" id="q12-opt5" value="5 required">
+            <label class="form-check-label" for="q12-opt5">5</label>
+            </div>`);
+    }
+    $("#questions").append(lastQuestion);
+};</script>
 </html>

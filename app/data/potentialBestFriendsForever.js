@@ -14,21 +14,22 @@ pBFF = [
         4,
         1
       ]
-  }
+  },
   {
       "name":"Nick",
       "photo":"https://dehayf5mhw1h7.cloudfront.net/wp-content/uploads/sites/816/2019/06/07102723/Big-Foot-1-832-832x476.jpg",
       "scores":[
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5,
+          5
       ]
   }
 ];
