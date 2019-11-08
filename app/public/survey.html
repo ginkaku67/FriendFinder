@@ -45,7 +45,7 @@
             </form>
             <footer>
                     <hr class="my-4">
-                    <a href="../data/potentialBestFriendsForever.js">Click me to see how the attractive people answered</a> | 
+                    <a href="../data/potentialBestFriends.js">Click me to see how the attractive people answered</a> | 
                     <a href="https://github.com/ginkaku67">Click this for a disappointing time</a>
                 </footer>
 
@@ -93,6 +93,7 @@
     $("#submit").click(function(){
     event.preventDefault();
     var answers = [];
+    console.log("answers  " + answers[]);
     var numAnswers = 0;
     for (var i = 1; i <= 11; i++) {
         answers.push(parseInt($(`input[name=question${i}]:checked`).val()));
@@ -104,6 +105,7 @@
         photo: $("#photo").val().trim(),
         scores: answers
     };
+    console.log("user  " + user.name + user.photo + user.scores);
     
     $.post("/api/potentialBestFriends", user, function(response){
         $("#maybeMatchName").text(response.name);
