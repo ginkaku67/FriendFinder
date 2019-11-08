@@ -1,22 +1,22 @@
-var potentialBestFriendsForever = require("../data/potentialBestFriendsForever");
+var potentialBestFriends = require("../data/potentialBestFriends");
 
 module.exports = function(app) {
 
-    app.get("/api/potentialBestFriendsForever", function(req, res){
-        res.json(potentialBestFriendsForever);
+    app.get("/api/potentialBestFriends", function(req, res){
+        res.json(potentialBestFriends);
     });
-    app.post("/api/potentialBestFriendsForever", function(req, res){
+    app.post("/api/potentialBestFriends", function(req, res){
         var user = req.body;
         var bFF = {};
-        var bestMatch = Infinity;
-        potentialBestFriendsForever.forEach(function(friend) {
-            var cohesion = 0;
-            for (let i=0; i<friend.scores.length; i++) {
+        var bestMatch = 60;
+        potentialBestFriends.forEach(function(friend) {
+            var userScore = 0;
+            for (var i=0; i<friend.scores.length; i++) {
             user.scores[i] = parseInt(user.scores[i]);
-            cohesion += Math.abs(user.scores[i] - friend.scores[i]);
+            userScore += Math.abs(user.scores[i] - friend.scores[i]);
             }
-            if (cohesion<bestMatch) {
-            bestMatch = cohesion;
+            if (userScore<bestMatch) {
+            bestMatch = userScore;
             bFF = friend;
             }
         });
@@ -25,6 +25,6 @@ module.exports = function(app) {
             photo: bFF.photo
         });
 
-        potentialBestFriendsForever.push(user)
+        potentialBestFriends.push(user)
     });
 }

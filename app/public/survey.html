@@ -105,11 +105,10 @@
         scores: answers
     };
     
-    $.post("/api/potentialBestFriendsForever", user, function(response){
+    $.post("/api/potentialBestFriends", user, function(response){
         $("#maybeMatchName").text(response.name);
         $("#maybeFriendPhoto").attr("src", response.photo);
-        $("#survey")[0].reset();
-        $('friendshipPopUp').modal('show');
+
     });
 })
 var questions = [
